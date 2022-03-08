@@ -12,6 +12,7 @@ This project is a Todo List Application which is built using the Back-End Techno
 <img height="140" width="140" src="https://code.visualstudio.com/assets/apple-touch-icon.png">
 </p>
 
+#
 
 * Library: None
 * Framework: ExpressJS
@@ -19,7 +20,7 @@ This project is a Todo List Application which is built using the Back-End Techno
 * Version Control System: Git
 * VCS Hosting: GitHub
 * Programming / Scripting: JavaScript
-* Front-End: HTML, CSS
+* Front-End: HTML, CSS, EJS
 * Runtime Environment: NodeJS
 * Integrated Development Environment: VSCode
 
