@@ -6,11 +6,12 @@ This project is a Todo List Application which is built using the Back-End Techno
 <img height="140" width="140" src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png">
 <img height="140" width="140" src="https://logodix.com/logo/470309.png">
 <img height="140" width="140" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png">
-<img height="140" width="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv2l-4Y-ZVZm77rzV9CRJxmgNPpy36zgePIA&usqp=CAU">
+<img height="140" width="250" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv2l-4Y-ZVZm77rzV9CRJxmgNPpy36zgePIA&usqp=CAU">
 <img height="140" width="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMX7p-_Zo1LqsEfO1v3B6Zw0Jgvhk4vo1fKA&usqp=CAU">
-<img height="140" width="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRASBParCnQhsRkKZ8opkkRjtk9XJ-MHdy0jA&usqp=CAU">
+<img height="140" width="250" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRASBParCnQhsRkKZ8opkkRjtk9XJ-MHdy0jA&usqp=CAU">
 <img height="140" width="140" src="https://code.visualstudio.com/assets/apple-touch-icon.png">
 </p>
+
 
 * Library: None
 * Framework: ExpressJS
