@@ -1,0 +1,32 @@
+{
+	"name": "todo-list-app",
+	"version": "1.0.0",
+	"description": "This is a todo list app using the backend MEN Stack",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ayush-Kanduri/Todo-List-App_BackEnd-MENStack.git"
+	},
+	"keywords": [
+		"mongodb",
+		"nodejs",
+		"expressjs",
+		"todo-list-app"
+	],
+	"author": "ayush kanduri",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Ayush-Kanduri/Todo-List-App_BackEnd-MENStack/issues"
+	},
+	"homepage": "https://github.com/Ayush-Kanduri/Todo-List-App_BackEnd-MENStack#readme",
+	"dependencies": {
+		"ejs": "^3.1.6",
+		"express": "^4.17.3",
+		"mongoose": "^6.2.4",
+		"nodemon": "^2.0.15"
+	}
+}
