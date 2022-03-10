@@ -6,6 +6,14 @@ const route = require("./routes/index.js");
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose.js");
 
+let data = {
+	text: "AYyush",
+	textarea: "sadasdasd",
+	priority: "high",
+	category: "work",
+	date: "2020-01-01",
+};
+
 app.use(express.static("./assets"));
 app.use(expressLayouts);
 

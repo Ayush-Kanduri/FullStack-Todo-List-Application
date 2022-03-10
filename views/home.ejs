@@ -1,3 +1,21 @@
 <link rel="stylesheet" href="/css/home.css" />
 <script defer src="/js/home.js"></script>
 <h2><%= title%></h2>
+<form action="/tasks/create" method="POST" id="form">
+	<input type="text" name="text" id="text" />
+	<textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+	<select name="priority" id="priority">
+		<option selected>select value</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<select name="category" id="category">
+		<option selected>select value</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<input type="date" name="date" id="date" />
+	<button type="submit">SUBMIT</button>
+</form>
