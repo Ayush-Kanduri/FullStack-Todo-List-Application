@@ -19,3 +19,6 @@
 	<input type="date" name="date" id="date" />
 	<button type="submit">SUBMIT</button>
 </form>
+<% for(let i of data){ %> <% for(let j in i){ %>
+<p><%= i[j]%></p>
+<%}%> <%}%>
