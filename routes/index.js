@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const homeRouterFile = require("./home");
-const createTaskRouterFile = require("./create-task");
+const taskRouterFile = require("./tasks");
 
 router.use("/", homeRouterFile);
-router.use("/tasks", createTaskRouterFile);
+router.use("/tasks", taskRouterFile);
 
 console.log("Router Loaded");
 module.exports = router;

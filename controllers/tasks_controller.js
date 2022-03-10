@@ -22,8 +22,22 @@ module.exports.createTask = (req, res) => {
 				console.log("Error in Creating a Task");
 				return;
 			}
-			console.log(`***** ${newTask} *****`);
+			console.log(
+				`********************\n${newTask}\n********************\n`
+			);
 			return res.redirect("back");
 		}
 	);
+};
+
+module.exports.deleteTask = (req, res) => {
+	let id = req.query.id;
+	Task.findByIdAndDelete(id, (err) => {
+		if (err) {
+			console.log("Error in Deleting a Task");
+			return;
+		}
+		console.log("Task Deleted");
+		return res.redirect("back");
+	});
 };

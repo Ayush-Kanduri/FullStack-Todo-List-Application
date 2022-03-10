@@ -52,7 +52,7 @@ div.app div.inputBox form #description {
 }
 div.app div.inputBox form #priority,
 div.app div.inputBox form #category,
-div.app div.inputBox form #due-date,
+div.app div.inputBox form #date,
 div.app div.inputBox form #task,
 div.app div.inputBox form #description {
 	resize: none;
@@ -67,12 +67,12 @@ div.app div.inputBox form #task:focus,
 div.app div.inputBox form #description:focus,
 div.app div.inputBox form #priority:focus,
 div.app div.inputBox form #category:focus,
-div.app div.inputBox form #due-date:focus {
+div.app div.inputBox form #date:focus {
 	outline: none;
 }
 div.app div.inputBox form #priority,
 div.app div.inputBox form #category,
-div.app div.inputBox form #due-date {
+div.app div.inputBox form #date {
 	padding-top: 2px;
 	font-size: 1rem;
 	color: var(--text-color);
@@ -86,7 +86,7 @@ div.app div.inputBox form #task::placeholder,
 div.app div.inputBox form #description::placeholder,
 div.app div.inputBox form #priority,
 div.app div.inputBox form #category,
-div.app div.inputBox form #due-date {
+div.app div.inputBox form #date {
 	color: var(--text-color);
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	font-size: 1rem;

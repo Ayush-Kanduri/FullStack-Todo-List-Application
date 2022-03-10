@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/_input.css" />
 <!-- Todo App Input Start -->
 <div class="inputBox">
-	<form action="" method="">
+	<form action="/tasks/create" method="POST">
 		<fieldset>
 			<legend class="legend">Title</legend>
 			<input
@@ -9,6 +9,7 @@
 				name="task"
 				id="task"
 				placeholder="Hi! What's the Task?"
+				required
 			/>
 		</fieldset>
 		<fieldset>
@@ -23,8 +24,8 @@
 		</fieldset>
 		<fieldset>
 			<legend class="legend">Priority</legend>
-			<select name="priority" id="priority">
-				<option selected class="def">Select Priority</option>
+			<select name="priority" id="priority" required>
+				<option selected class="def" value="">Select Priority</option>
 				<option value="low">Low</option>
 				<option value="medium">Medium</option>
 				<option value="high">High</option>
@@ -32,8 +33,8 @@
 		</fieldset>
 		<fieldset>
 			<legend class="legend">Category</legend>
-			<select name="category" id="category">
-				<option selected class="def">Select Category</option>
+			<select name="category" id="category" required>
+				<option selected class="def" value="">Select Category</option>
 				<option value="personal">Personal</option>
 				<option value="work">Work</option>
 				<option value="study">Study</option>
@@ -43,7 +44,7 @@
 		</fieldset>
 		<fieldset>
 			<legend class="legend">Due Date</legend>
-			<input type="date" name="due-date" id="due-date" />
+			<input type="date" name="date" id="date" required />
 		</fieldset>
 		<button type="submit" id="save">
 			<i class="fa-solid fa-circle-check" id="taskSubmit"></i>
