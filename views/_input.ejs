@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/_input.css" />
+<!-- Todo App Input Start -->
+<div class="inputBox">
+	<form action="" method="">
+		<fieldset>
+			<legend class="legend">Title</legend>
+			<input
+				type="text"
+				name="task"
+				id="task"
+				placeholder="Hi! What's the Task?"
+			/>
+		</fieldset>
+		<fieldset>
+			<legend class="legend">Description</legend>
+			<textarea
+				name="description"
+				id="description"
+				placeholder="Hi! What's the Description?"
+				cols="40"
+				rows="2"
+			></textarea>
+		</fieldset>
+		<fieldset>
+			<legend class="legend">Priority</legend>
+			<select name="priority" id="priority">
+				<option selected class="def">Select Priority</option>
+				<option value="low">Low</option>
+				<option value="medium">Medium</option>
+				<option value="high">High</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend class="legend">Category</legend>
+			<select name="category" id="category">
+				<option selected class="def">Select Category</option>
+				<option value="personal">Personal</option>
+				<option value="work">Work</option>
+				<option value="study">Study</option>
+				<option value="chores">Chores</option>
+				<option value="others">Others</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend class="legend">Due Date</legend>
+			<input type="date" name="due-date" id="due-date" />
+		</fieldset>
+		<button type="submit" id="save">
+			<i class="fa-solid fa-circle-check" id="taskSubmit"></i>
+		</button>
+	</form>
+</div>
+<!-- Todo App Input End -->

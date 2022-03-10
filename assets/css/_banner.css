@@ -1,0 +1,56 @@
+/* ----------------Application Banner---------------- */
+div.app > header.banner {
+	width: 100%;
+	height: 55px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	position: relative;
+	overflow: hidden;
+}
+div.app > header.banner > div.hoverDisplay {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#hide {
+	display: none;
+}
+div.app > header.banner > div.hoverDisplay .date {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+	gap: 1rem;
+}
+div.app > header.banner > div.hoverDisplay .date,
+div.app > header.banner > div.hoverDisplay #name {
+	font-size: 1.3rem;
+	color: var(--text-color);
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+	font-family: "Ubuntu", sans-serif;
+	word-spacing: 0.15rem;
+}
+div.app > header.banner > div.hoverDisplay #name {
+	font-size: 2rem;
+}
+/* --------------------------------514px-------------------------------- */
+@media only screen and (max-width: 514px) {
+	div.app > header.banner > div.hoverDisplay .date,
+	div.app > header.banner > div.hoverDisplay #name {
+		font-size: 1rem;
+	}
+	div.app > header.banner > div.hoverDisplay #name {
+		font-size: 1.5rem;
+	}
+	.task .text {
+		width: 40%;
+	}
+}
+/* --------------------------------370px-------------------------------- */
+@media only screen and (max-width: 370px) {
+	div.app > header.banner > div.hoverDisplay #name {
+		font-size: 1.1rem;
+	}
+}

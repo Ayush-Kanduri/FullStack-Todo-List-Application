@@ -1,0 +1,178 @@
+/* ----------------Task Input Form---------------- */
+div.app div.inputBox {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	padding: 10px;
+}
+div.app div.inputBox form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+}
+div.app div.inputBox form fieldset:nth-child(1) {
+	width: 20%;
+	height: 50%;
+	border: none;
+}
+div.app div.inputBox form fieldset:nth-child(2) {
+	padding-top: 0.6%;
+	border: none;
+	margin-top: 15px;
+}
+div.app div.inputBox form fieldset:nth-child(3),
+div.app div.inputBox form fieldset:nth-child(4),
+div.app div.inputBox form fieldset:nth-child(5) {
+	width: 13%;
+	height: 50%;
+	border: none;
+}
+div.app div.inputBox form fieldset:nth-child(5) {
+	width: 5%;
+}
+div.app div.inputBox form .legend {
+	text-transform: uppercase;
+	background-color: #d9f4f5;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 0.8rem;
+	padding: 7px;
+}
+div.app div.inputBox form #task,
+div.app div.inputBox form #description {
+	padding: 5px;
+	font-size: 1rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	display: flex;
+	word-break: break-all;
+}
+div.app div.inputBox form #priority,
+div.app div.inputBox form #category,
+div.app div.inputBox form #due-date,
+div.app div.inputBox form #task,
+div.app div.inputBox form #description {
+	resize: none;
+	width: 100%;
+	text-overflow: ellipsis;
+	height: 100%;
+	background: transparent;
+	outline: none;
+	border: none;
+}
+div.app div.inputBox form #task:focus,
+div.app div.inputBox form #description:focus,
+div.app div.inputBox form #priority:focus,
+div.app div.inputBox form #category:focus,
+div.app div.inputBox form #due-date:focus {
+	outline: none;
+}
+div.app div.inputBox form #priority,
+div.app div.inputBox form #category,
+div.app div.inputBox form #due-date {
+	padding-top: 2px;
+	font-size: 1rem;
+	color: var(--text-color);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+div.app div.inputBox form #task::placeholder,
+div.app div.inputBox form #description::placeholder {
+	padding-left: 6px;
+}
+div.app div.inputBox form #task::placeholder,
+div.app div.inputBox form #description::placeholder,
+div.app div.inputBox form #priority,
+div.app div.inputBox form #category,
+div.app div.inputBox form #due-date {
+	color: var(--text-color);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-size: 1rem;
+	font-family: monospace;
+	word-break: break-all;
+}
+option {
+	color: black;
+}
+div.app div.inputBox button {
+	padding: 1.3em 3em;
+	font-size: 7px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background-color: var(--text-color);
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div.app div.inputBox button i {
+	font-size: 1.5rem;
+	color: black;
+	transition: color 0.1s ease-in;
+}
+div.app div.inputBox button:hover {
+	background-color: #2ee59d;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: var(--text-color);
+	transform: translateY(-7px);
+}
+div.app div.inputBox button:active {
+	transform: translateY(-1px);
+}
+/* --------------------------------1072px-------------------------------- */
+@media only screen and (max-width: 1072px) {
+	div.app div.inputBox button {
+		width: 12%;
+		transition: all 0.3s linear;
+	}
+	div.app div.inputBox {
+		height: 170px;
+	}
+}
+/* --------------------------------939px-------------------------------- */
+@media only screen and (max-width: 939px) {
+	div.app div.inputBox {
+		height: 180px;
+	}
+}
+/* --------------------------------435px-------------------------------- */
+@media only screen and (max-width: 435px) {
+	div.app div.inputBox {
+		height: 800px;
+	}
+	div.app div.inputBox form {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		gap: 1rem;
+	}
+	div.app div.inputBox form fieldset:nth-child(1),
+	div.app div.inputBox form fieldset:nth-child(2),
+	div.app div.inputBox form fieldset:nth-child(3),
+	div.app div.inputBox form fieldset:nth-child(4) {
+		width: 100%;
+		height: 15%;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	div.container {
+		height: 170vh;
+	}
+	div.app div.inputBox form fieldset:nth-child(5) {
+		border-bottom: 1px solid #e5e5e5;
+		height: 15%;
+	}
+	div.app div.inputBox button {
+		width: 100%;
+	}
+}

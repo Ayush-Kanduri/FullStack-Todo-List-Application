@@ -21,6 +21,16 @@
 		<%- script%>
 	</head>
 	<body>
-		<%- include('_header');%> <%- body%> <%- include('_footer');%>
+		<!-- Container Start -->
+		<div class="container">
+			<%- include('_background-circles');%>
+			<!-- Application Start -->
+			<div class="app">
+				<%- include('_banner');%> <%- include('_input');%> <%-
+				include('_upper-tabs');%> <%- body%> <%- include('_lower-tabs');%>
+			</div>
+			<!-- Application End -->
+		</div>
+		<!-- Container End -->
 	</body>
 </html>

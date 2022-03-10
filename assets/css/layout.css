@@ -1,8 +1,61 @@
-body {
-	text-align: center;
-	background-color: #f2f2f2;
+/* ----------------Google Fonts---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+/* ----------------General Styling---------------- */
+:root {
+	--bgcolor: #24c6dc;
+	--circle-color: #6be4e6;
+	--app-bgcolor: rgba(255, 255, 255, 0.3);
+	--text-color: white;
 }
-header,
-footer {
-	background-color: red;
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+}
+/* ----------------Body---------------- */
+body {
+	background-color: var(--bgcolor);
+}
+/* ----------------Container---------------- */
+div.container {
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+div.container ::-webkit-scrollbar {
+	display: none;
+	overflow: hidden;
+}
+/* ----------------Application---------------- */
+div.app {
+	background: var(--app-bgcolor);
+	box-shadow: 0px 0px 10px 1px var(--app-bgcolor);
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(7px);
+	border-radius: 20px;
+	border: 1px solid var(--app-bgcolor);
+	z-index: 2;
+	width: 95%;
+	height: 95%;
+	margin-top: 1%;
+	transition: all 0.2s linear;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+div.app:hover {
+	background: rgba(255, 255, 255, 0.27);
+}
+/* --------------------------------435px-------------------------------- */
+@media only screen and (max-width: 435px) {
+	div.container {
+		height: 170vh;
+	}
 }

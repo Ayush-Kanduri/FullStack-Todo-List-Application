@@ -1,0 +1,21 @@
+/* ----------------Lower Tabs---------------- */
+div.taskBar {
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: none;
+}
+div.taskBar > div.tabs:hover {
+	background: none;
+	cursor: pointer;
+	color: rgb(47, 0, 255);
+}
+#taskCount:hover {
+	cursor: initial;
+	color: var(--text-color);
+}
+/* ----------------Hide Class---------------- */
+.hide {
+	display: none;
+}

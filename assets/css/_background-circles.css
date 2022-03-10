@@ -1,0 +1,24 @@
+/* ----------------Background Circles---------------- */
+div#circles {
+	position: absolute;
+	z-index: -5;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	align-content: space-between;
+	width: 100%;
+	height: 100%;
+	gap: 2rem;
+	padding: 1rem;
+}
+div.circle {
+	width: 130px;
+	height: 130px;
+	min-width: 20px;
+	min-height: 20px;
+	border-radius: 10px;
+	filter: blur(10px);
+	background-color: var(--circle-color);
+	box-shadow: 0px 0px 30px 30px var(--circle-color);
+}

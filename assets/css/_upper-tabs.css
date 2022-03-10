@@ -1,0 +1,31 @@
+/* ----------------Tabs Container---------------- */
+div.tabs-box {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 1px solid var(--text-color);
+	border-bottom: 1px solid var(--text-color);
+}
+div.tabs-box > div.tabs {
+	width: 33%;
+	padding: 2%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: var(--text-color);
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: 0.9rem;
+	transition: all 0.1s linear;
+}
+div.tabs-box > div.tabs:hover {
+	background: rgba(255, 255, 255, 0.2);
+	cursor: pointer;
+}
+div.tabs-box > div.tabs.active {
+	color: rgb(230, 230, 230);
+	cursor: initial;
+	background: rgba(0, 0, 0, 0.04);
+}
