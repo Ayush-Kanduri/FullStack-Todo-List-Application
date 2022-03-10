@@ -25,6 +25,7 @@ module.exports.createTask = (req, res) => {
 			console.log(
 				`********************\n${newTask}\n********************\n`
 			);
+			console.log("Task Created");
 			return res.redirect("back");
 		}
 	);
@@ -32,12 +33,34 @@ module.exports.createTask = (req, res) => {
 
 module.exports.deleteTask = (req, res) => {
 	let id = req.query.id;
-	Task.findByIdAndDelete(id, (err) => {
+	setTimeout(() => {
+		Task.findByIdAndDelete(id, (err) => {
+			if (err) {
+				console.log("Error in Deleting a Task");
+				return;
+			}
+			console.log("Task Deleted");
+			return res.redirect("back");
+		});
+	}, 1000);
+};
+
+module.exports.completeTask = (req, res) => {
+	let id = req.query.id;
+	let completed = req.query.completed;
+
+	if (completed == "true") {
+		completed = false;
+	} else {
+		completed = true;
+	}
+
+	Task.findByIdAndUpdate(id, { completed: completed }, (err) => {
 		if (err) {
-			console.log("Error in Deleting a Task");
+			console.log("Error in Updating the Task");
 			return;
 		}
-		console.log("Task Deleted");
+		console.log("Task Updated");
 		return res.redirect("back");
 	});
 };
