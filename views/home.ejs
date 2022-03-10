@@ -2,23 +2,45 @@
 <script defer src="/js/home.js"></script>
 <h2><%= title%></h2>
 <form action="/tasks/create" method="POST" id="form">
-	<input type="text" name="text" id="text" />
-	<textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+	<input
+		type="text"
+		name="task"
+		id="task"
+		placeholder="Hi! What's the Task?"
+	/>
+	<textarea
+		name="description"
+		id="description"
+		placeholder="Hi! What's the Description?"
+		cols="40"
+		rows="2"
+	></textarea>
 	<select name="priority" id="priority">
-		<option selected>select value</option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
+		<option selected class="def">Select Priority</option>
+		<option value="low">Low</option>
+		<option value="medium">Medium</option>
+		<option value="high">High</option>
 	</select>
 	<select name="category" id="category">
-		<option selected>select value</option>
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
+		<option selected class="def">Select Category</option>
+		<option value="personal">Personal</option>
+		<option value="work">Work</option>
+		<option value="study">Study</option>
+		<option value="chores">Chores</option>
+		<option value="others">Others</option>
 	</select>
 	<input type="date" name="date" id="date" />
-	<button type="submit">SUBMIT</button>
+
+	<button type="submit" id="save">
+		<i class="fa-solid fa-circle-check" id="taskSubmit"></i>
+	</button>
 </form>
-<% for(let i of data){ %> <% for(let j in i){ %>
-<p><%= i[j]%></p>
-<%}%> <%}%>
+
+<% for(let i of task_list){ %>
+<p><%= i.task%></p>
+<p><%= i.description%></p>
+<p><%= i.priority%></p>
+<p><%= i.category%></p>
+<p><%= i.date%></p>
+<br />
+<%}%>

@@ -1,8 +1,14 @@
-const data = require("../data");
+const Task = require("../models/task");
 
 module.exports.home = (req, res) => {
-	return res.render("home", {
-		title: "Home Page",
-		data,
+	Task.find({}, (err, taskList) => {
+		if (err) {
+			console.log("Error in fetching the tasks from DB");
+			return;
+		}
+		return res.render("home", {
+			title: "Home Page",
+			task_list: taskList,
+		});
 	});
 };
