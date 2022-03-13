@@ -1,8 +1,20 @@
 <link rel="stylesheet" href="/css/_lower-tabs.css" />
 <!-- Lower Tabs Start -->
 <div class="taskBar tabs-box">
-	<div class="tabs" id="complete-all">Complete All Tasks</div>
-	<div class="tabs" id="taskCount">0 Tasks Left</div>
-	<div class="tabs" id="clear-completed">Clear Completed</div>
+	<div
+		class="tabs"
+		id="complete-all"
+		onclick="window.location='/tasks/complete/all';"
+	>
+		Complete All Tasks
+	</div>
+	<div class="tabs" id="taskCount"><%= count%> Tasks Left</div>
+	<div
+		class="tabs"
+		id="clear-completed"
+		onclick="window.location='/tasks/delete/completed';"
+	>
+		Clear Completed
+	</div>
 </div>
 <!-- Lower Tabs End -->

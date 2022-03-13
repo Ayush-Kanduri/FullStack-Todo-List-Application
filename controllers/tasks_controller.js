@@ -64,3 +64,27 @@ module.exports.completeTask = (req, res) => {
 		return res.redirect("back");
 	});
 };
+
+module.exports.deleteCompletedTasks = (req, res) => {
+	setTimeout(() => {
+		Task.deleteMany({ completed: true }, (err) => {
+			if (err) {
+				console.log("Error in Deleting the Task");
+				return;
+			}
+			console.log("Task Deleted");
+			return res.redirect("back");
+		});
+	}, 1000);
+};
+
+module.exports.completeAllTasks = (req, res) => {
+	Task.updateMany({ completed: false }, { completed: true }, (err) => {
+		if (err) {
+			console.log("Error in Updating the Task");
+			return;
+		}
+		console.log("Task Updated");
+		return res.redirect("back");
+	});
+};
