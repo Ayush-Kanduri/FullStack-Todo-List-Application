@@ -8,6 +8,7 @@
 	margin-top: 1%;
 	overflow-y: scroll;
 	height: 310px;
+	animation: fade 0.6s linear;
 }
 .scroll {
 	overflow: hidden;
@@ -15,15 +16,6 @@
 .content::-webkit-scrollbar {
 	display: none;
 	overflow: hidden;
-}
-/* ----------------Tab 1, Tab 2, Tab 3---------------- */
-.tab1 {
-	animation: fade 0.6s linear;
-}
-.tab2,
-.tab3 {
-	display: none;
-	animation: fade 0.6s linear;
 }
 /* ----------------Animation---------------- */
 @keyframes fade {

@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/tasks.css" />
+<!-- <script defer src="/js/task.js"></script> -->
+<div class="scroll">
+	<!-- Tab Content Template Start -->
+	<div class="tab1 content">
+		<% for(let i of task_list){ %>
+		<div class="task">
+			<div class="checkbox">
+				<a
+					href="/tasks/complete/?id=<%= i._id %>&completed=<%= i.completed %>"
+				>
+					<i class="fa-solid fa-circle-check" id="check"></i>
+				</a>
+			</div>
+			<div class="text">
+				<% if(i.completed){ %>
+				<p class="line-through"><%= i.task%></p>
+				<% }else{ %>
+				<p><%= i.task%></p>
+				<% } %>
+				<p class="date">
+					<i class="fa-solid fa-calendar-days"></i> &nbsp;<%= i.date%>
+				</p>
+			</div>
+			<div class="priority">
+				<p><%= i.priority%></p>
+			</div>
+			<div class="category">
+				<p><%= i.category%></p>
+			</div>
+			<div class="edit">
+				<i class="fa-solid fa-pen-to-square" id="edit"></i>
+			</div>
+			<div class="delete">
+				<a href="/tasks/delete/?id=<%= i._id %>">
+					<i class="fa-solid fa-trash-alt" id="delete"></i>
+				</a>
+			</div>
+		</div>
+		<%}%>
+	</div>
+	<!-- Tab Content Template End -->
+</div>
