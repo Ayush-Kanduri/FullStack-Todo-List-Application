@@ -1,5 +1,7 @@
+//Require the Task Model Data Structure
 const Task = require("../models/task");
 
+//Export the Home Controller's createTask() Function
 module.exports.createTask = (req, res) => {
 	let date = new Date(req.body.date).getDate();
 	if (date < 10) {
@@ -31,6 +33,7 @@ module.exports.createTask = (req, res) => {
 	);
 };
 
+//Export the Home Controller's deleteTask() Function
 module.exports.deleteTask = (req, res) => {
 	let id = req.query.id;
 	setTimeout(() => {
@@ -45,6 +48,7 @@ module.exports.deleteTask = (req, res) => {
 	}, 1000);
 };
 
+//Export the Home Controller's completeTask() Function
 module.exports.completeTask = (req, res) => {
 	let id = req.query.id;
 	let completed = req.query.completed;
@@ -65,6 +69,7 @@ module.exports.completeTask = (req, res) => {
 	});
 };
 
+//Export the Home Controller's deleteCompletedTasks() Function
 module.exports.deleteCompletedTasks = (req, res) => {
 	setTimeout(() => {
 		Task.deleteMany({ completed: true }, (err) => {
@@ -78,6 +83,7 @@ module.exports.deleteCompletedTasks = (req, res) => {
 	}, 1000);
 };
 
+//Export the Home Controller's completeAllTasks() Function
 module.exports.completeAllTasks = (req, res) => {
 	Task.updateMany({ completed: false }, { completed: true }, (err) => {
 		if (err) {

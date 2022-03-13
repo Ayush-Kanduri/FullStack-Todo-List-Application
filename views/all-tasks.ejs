@@ -1,8 +1,12 @@
+<!-- ---------------------------------------------- -->
+<!-- -----------------Dynamic Part----------------- -->
+<!-- ---------------------------------------------- -->
 <link rel="stylesheet" href="/css/tasks.css" />
 <script defer src="/js/task.js"></script>
 <div class="scroll">
 	<!-- Tab Content Template Start -->
 	<div class="tab1 content">
+		<!-- Renders the Task List -->
 		<% for(let i of task_list){ %>
 		<div class="task">
 			<div class="checkbox">
@@ -12,6 +16,8 @@
 					<i class="fa-solid fa-circle-check" id="check"></i>
 				</a>
 			</div>
+
+			<!-- Conditional Rendering -->
 			<div class="text">
 				<% if(i.completed){ %>
 				<p class="line-through"><%= i.task%></p>
@@ -22,15 +28,49 @@
 					<i class="fa-solid fa-calendar-days"></i> &nbsp;<%= i.date%>
 				</p>
 			</div>
-			<div class="priority">
+
+			<!-- Conditional Rendering -->
+			<% if(i.priority==='low'){ %>
+			<div class="priority low">
 				<p><%= i.priority%></p>
 			</div>
-			<div class="category">
+			<% }else if(i.priority==='medium'){ %>
+			<div class="priority medium">
+				<p><%= i.priority%></p>
+			</div>
+			<% }else{ %>
+			<div class="priority high">
+				<p><%= i.priority%></p>
+			</div>
+			<% } %>
+
+			<!-- Conditional Rendering -->
+			<% if(i.category==='personal'){ %>
+			<div class="category personal">
 				<p><%= i.category%></p>
 			</div>
+			<% }else if(i.category==='work'){ %>
+			<div class="category work">
+				<p><%= i.category%></p>
+			</div>
+			<% }else if(i.category==='study'){ %>
+			<div class="category study">
+				<p><%= i.category%></p>
+			</div>
+			<% }else if(i.category==='chores'){ %>
+			<div class="category chores">
+				<p><%= i.category%></p>
+			</div>
+			<% }else{ %>
+			<div class="category others">
+				<p><%= i.category%></p>
+			</div>
+			<% } %>
+
 			<div class="edit">
 				<i class="fa-solid fa-pen-to-square" id="edit"></i>
 			</div>
+
 			<div class="delete">
 				<a href="/tasks/delete/?id=<%= i._id %>">
 					<i class="fa-solid fa-trash-alt" id="delete"></i>

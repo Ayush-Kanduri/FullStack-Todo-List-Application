@@ -23,11 +23,26 @@
 	<body>
 		<!-- Container Start -->
 		<div class="container">
+			<!-- Background Circles Start -->
 			<%- include('_background-circles');%>
+			<!-- Background Circles End -->
 			<!-- Application Start -->
 			<div class="app">
-				<%- include('_banner');%> <%- include('_input');%> <%-
-				include('_upper-tabs');%> <%- body%> <%- include('_lower-tabs');%>
+				<!-- Banner Start -->
+				<%- include('_banner');%>
+				<!-- Banner End -->
+				<!-- Input Start -->
+				<%- include('_input');%>
+				<!-- Input End -->
+				<!-- Upper Tabs Start -->
+				<%- include('_upper-tabs');%>
+				<!-- Upper Tabs End -->
+				<!-- Dynamic Display Start -->
+				<%- body%>
+				<!-- Dynamic Display End -->
+				<!-- Lower Tabs Start -->
+				<%- include('_lower-tabs');%>
+				<!-- Lower Tabs End -->
 			</div>
 			<!-- Application End -->
 		</div>

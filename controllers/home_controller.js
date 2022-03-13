@@ -1,5 +1,7 @@
+//Require the Task Model Data Structure
 const Task = require("../models/task");
 
+//Export the Home Controller's home() Function
 module.exports.home = (req, res) => {
 	let count = 0;
 	Task.find({}, (err, taskList) => {
@@ -20,6 +22,7 @@ module.exports.home = (req, res) => {
 	});
 };
 
+//Export the Home Controller's incompleteTasks() Function
 module.exports.incompleteTasks = (req, res) => {
 	Task.find({ completed: false }, (err, taskList) => {
 		if (err) {
@@ -34,6 +37,7 @@ module.exports.incompleteTasks = (req, res) => {
 	});
 };
 
+//Export the Home Controller's completedTasks() Function
 module.exports.completedTasks = (req, res) => {
 	let count = 0;
 	const arr = [];

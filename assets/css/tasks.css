@@ -31,7 +31,6 @@
 	width: 100%;
 	height: 70px;
 	display: flex;
-	/* display: none; */
 	justify-content: space-between;
 	align-items: center;
 	transition: all 0.1s linear;
@@ -41,21 +40,37 @@
 	background: rgba(0, 0, 0, 0.03);
 }
 .task .priority {
-	/* HIGH - red */
-	/* MEDIUM - rgb(129, 129, 235) */
-	/* LOW - rgb(160, 224, 160) */
-	background-color: rgb(241, 101, 101);
 	text-transform: capitalize;
 }
 .task .category {
-	/* Personal-rgb(241, 101, 101) */
-	/* Work-rgb(240, 237, 102) */
-	/* Chores-rgb(3, 188, 216)*/
-	/* Study-rgb(240, 102, 182) */
-	/* Others -  rgb(203, 240, 102)*/
-	background-color: rgb(3, 188, 216);
 	text-transform: capitalize;
 }
+/* BG Color Classes */
+.high {
+	background-color: red;
+}
+.medium {
+	background-color: rgb(129, 129, 235);
+}
+.low {
+	background-color: rgb(160, 224, 160);
+}
+.personal {
+	background-color: rgb(241, 101, 101);
+}
+.work {
+	background-color: rgb(240, 237, 102);
+}
+.chores {
+	background-color: rgb(129, 129, 235);
+}
+.study {
+	background-color: rgb(240, 102, 182);
+}
+.others {
+	background-color: rgb(160, 224, 160);
+}
+/* ----------------Task Template---------------- */
 .task .text .date,
 .task .priority,
 .task .category,
@@ -89,12 +104,13 @@
 .task .date {
 	width: 16%;
 }
-.task a {
+.task a,
+.task #edit {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.7);
 }
 .task a #check:hover,
-.task a #edit:hover {
+.task #edit:hover {
 	color: #afffd3;
 }
 .task a #delete:hover {
