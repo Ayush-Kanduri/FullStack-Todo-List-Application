@@ -4,7 +4,7 @@
 //Require Express Module for running the Express Server
 const express = require("express");
 //Create Port
-const port = 8000;
+const port = process.env.PORT || 8000;
 //Create Express App for Request-Response Cycle & to create the Express Server
 const app = express();
 //Require Module Path for Directory
@@ -15,7 +15,14 @@ const route = require("./routes/index.js");
 const expressLayouts = require("express-ejs-layouts");
 //Requires MongoDB
 const db = require("./config/mongoose.js");
+//Requires cors Module
+const cors = require("cors");
+//Requires Dotenv Module
+const dotenv = require("dotenv").config();
 
+
+//Use the Cors Module
+app.use(cors());
 //Middleware - Express App uses Static Files in the Assets Folder
 app.use(express.static("./assets"));
 //Middleware - Express App uses expressLayouts to tell that the views which are going to be rendered belongs to some layout

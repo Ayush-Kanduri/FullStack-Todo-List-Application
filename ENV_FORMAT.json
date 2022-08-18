@@ -1,0 +1,9 @@
+{
+	"DEPLOYMENT": "local",
+	"ENVIRONMENT": "development",
+	"DB": "As per the MongoDB URL Configuration",
+	"DB_NAME": "As per the MongoDB DB Name",
+
+	"DB_DEVELOPMENT": "mongodb://localhost/todo_list",
+	"DB_NAME_DEVELOPMENT": "todo_list"
+}

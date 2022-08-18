@@ -24,10 +24,10 @@ module.exports.createTask = (req, res) => {
 				console.log("Error in Creating a Task");
 				return;
 			}
-			console.log(
-				`********************\n${newTask}\n********************\n`
-			);
-			console.log("Task Created");
+			// console.log(
+			// 	`********************\n${newTask}\n********************\n`
+			// );
+			// console.log("Task Created");
 			return res.redirect("back");
 		}
 	);
@@ -42,7 +42,7 @@ module.exports.deleteTask = (req, res) => {
 				console.log("Error in Deleting a Task");
 				return;
 			}
-			console.log("Task Deleted");
+			// console.log("Task Deleted");
 			return res.redirect("back");
 		});
 	}, 1000);
@@ -64,7 +64,7 @@ module.exports.completeTask = (req, res) => {
 			console.log("Error in Updating the Task");
 			return;
 		}
-		console.log("Task Updated");
+		// console.log("Task Updated");
 		return res.redirect("back");
 	});
 };
@@ -77,7 +77,7 @@ module.exports.deleteCompletedTasks = (req, res) => {
 				console.log("Error in Deleting the Task");
 				return;
 			}
-			console.log("Task Deleted");
+			// console.log("Task Deleted");
 			return res.redirect("back");
 		});
 	}, 1000);
@@ -90,7 +90,7 @@ module.exports.completeAllTasks = (req, res) => {
 			console.log("Error in Updating the Task");
 			return;
 		}
-		console.log("Task Updated");
+		// console.log("Task Updated");
 		return res.redirect("back");
 	});
 };
