@@ -5,6 +5,7 @@ const env = require("./environment");
 
 let db;
 
+//If the Environment is Development
 const Development = async () => {
 	try {
 		//Connect to the Database
@@ -18,10 +19,12 @@ const Development = async () => {
 			console.log("Connected to MongoDB Successfully");
 		});
 	} catch (error) {
+		//If Error
 		console.log(error);
 	}
 };
 
+//If the Environment is Production
 const Production = async () => {
 	try {
 		const options = { useNewUrlParser: true, useUnifiedTopology: true };
@@ -37,6 +40,7 @@ const Production = async () => {
 	}
 };
 
+//Establishes the Connection based on the Environment
 const EstablishConnection = async () => {
 	try {
 		if (env.name === "development" && env.deployment === "local") {
@@ -46,6 +50,8 @@ const EstablishConnection = async () => {
 		} else if (env.name === "production" && env.deployment === "AWS") {
 			await Development();
 		} else if (env.name === "production" && env.deployment === "Heroku") {
+			await Production();
+		} else if (env.name === "production" && env.deployment === "other") {
 			await Production();
 		}
 		if (!db) console.log("Connection Error");
